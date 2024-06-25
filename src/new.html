@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vice FE Tool</title>
+    <script src="/main.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Create new facility</h1>
+      <h3>Enter your facility ID (3 Chars):</h3>
+    </div>
+    <div style="text-align: center;">
+      <input type="text" id="facilityName"></input>
+      <button type="button" onclick="myFunction()">Create</button>
+    </div>
+    <script>
+      function myFunction() {
+        let name = document.getElementById("facilityName").value;
+        viceFile.tracon = name;
+        console.log(`Created facility: ${viceFile.tracon}`);
+        window.location.href = "./airports.html";
+      }
+    </script>
+  </body>
+</html>
