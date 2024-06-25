@@ -5,9 +5,11 @@
     <link rel="stylesheet" href="styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vice FE Tool</title>
-    <script src="/main.js" defer></script>
+    <script>
+      const viceFile = JSON.parse(localStorage.getItem('viceFile'))
+      console.log(viceFile);
+    </script>
   </head>
-
   <body>
     <div class="container">
       <h1>Add airports</h1>
@@ -20,9 +22,6 @@
     <script>
       function myFunction() {
         let name = document.getElementById("facilityName").value;
-        viceFile.tracon = name;
-        console.log(`Created facility: ${viceFile.tracon}`);
-        window.location.href = "./airports.html";
       }
     </script>
   </body>
